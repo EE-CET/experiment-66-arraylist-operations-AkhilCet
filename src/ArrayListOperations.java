@@ -5,6 +5,18 @@ import java.util.Scanner;
 public class ArrayListOperations {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+        int n = scanner.nextInt();
+        ArrayList<String> shoppingCart = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            shoppingCart.add(scanner.next());
+        }
+        String searchItem = scanner.next();
+        Collections.sort(shoppingCart);
+        System.out.println("Sorted Items: " + shoppingCart);
+        if (shoppingCart.contains(searchItem)) {
+            System.out.println("Found");
+        } else {
+            System.out.println("Not Found");
+        }
     }
 }
